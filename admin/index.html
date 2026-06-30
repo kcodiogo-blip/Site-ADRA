@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Prestação de Contas | Clube de Atletismo</title>
+    <meta name="description" content="Prestação de contas pública do clube de atletismo, com receitas, despesas, documentos e histórico de publicações." />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="Início"><span class="brand-mark">CA</span><span><strong>Clube de Atletismo</strong><small>Prestação de contas</small></span></a>
+      <nav aria-label="Navegação principal"><a href="#resumo">Resumo</a><a href="#lancamentos">Lançamentos</a><a href="#documentos">Documentos</a><a class="admin-link" href="./admin/">Publicar</a></nav>
+    </header>
+    <main>
+      <section class="hero"><div class="hero-media" aria-hidden="true"></div><div class="hero-content"><p class="eyebrow">Transparência do clube</p><h1>Prestação de contas aberta para atletas, famílias e apoiadores.</h1><p>Consulte receitas, despesas, saldos e comprovantes do clube em um só lugar. As informações podem ser atualizadas por pessoas autorizadas pela diretoria.</p></div></section>
+      <section id="resumo" class="section summary-band" aria-labelledby="resumo-title"><div class="section-heading"><p class="eyebrow">Resumo financeiro</p><h2 id="resumo-title">Visão geral</h2></div><div class="metrics" aria-live="polite"><article><span>Receitas</span><strong id="total-receitas">R$ 0,00</strong></article><article><span>Despesas</span><strong id="total-despesas">R$ 0,00</strong></article><article><span>Saldo</span><strong id="saldo">R$ 0,00</strong></article><article><span>Última atualização</span><strong id="ultima-atualizacao">-</strong></article></div></section>
+      <section id="lancamentos" class="section" aria-labelledby="lancamentos-title"><div class="section-heading row"><div><p class="eyebrow">Histórico</p><h2 id="lancamentos-title">Lançamentos</h2></div><div class="filters" aria-label="Filtros"><button class="filter active" type="button" data-filter="todos">Todos</button><button class="filter" type="button" data-filter="receita">Receitas</button><button class="filter" type="button" data-filter="despesa">Despesas</button></div></div><div class="table-wrap"><table><thead><tr><th>Data</th><th>Tipo</th><th>Descrição</th><th>Categoria</th><th>Valor</th><th>Comprovante</th></tr></thead><tbody id="lancamentos-lista"></tbody></table></div></section>
+      <section id="documentos" class="section documents-band" aria-labelledby="documentos-title"><div class="section-heading"><p class="eyebrow">Arquivos</p><h2 id="documentos-title">Documentos publicados</h2></div><div id="documentos-lista" class="documents"></div></section>
+    </main>
+    <footer><p>Clube de Atletismo - prestação de contas pública.</p><a href="./admin/">Entrar para publicar</a></footer>
+    <script src="./app.js"></script>
+  </body>
+</html>
