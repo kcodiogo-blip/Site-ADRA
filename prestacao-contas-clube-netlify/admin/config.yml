@@ -1,0 +1,36 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+media_folder: "uploads"
+public_folder: "/uploads"
+
+site_url: "/"
+display_url: "/"
+logo_url: "/"
+
+collections:
+  - name: "dados"
+    label: "Prestação de contas"
+    files:
+      - name: "lancamentos"
+        label: "Lançamentos financeiros"
+        file: "data/lancamentos.json"
+        fields:
+          - label: "Lançamentos"
+            name: "lancamentos"
+            widget: "list"
+            summary: "{{fields.data}} - {{fields.tipo}} - {{fields.descricao}}"
+            fields:
+              - { label: "Data", name: "data", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
+              - label: "Tipo"
+                name: "tipo"
+                widget: "select"
+                options:
+                  - { label: "Receita", value: "receita" }
+                  - { label: "Despesa", value: "despesa" }
+              - { label: "Descrição", name: "descricao", widget: "string" }
+              - { label: "Categoria", name: "categoria", widget: "string", required: false }
+              - { label: "Valor", name: "valor", widget: "number", value_type: "float", min: 0 }
+              - { label: "Comprovante", name: "comprovante", widget: "file", required: false }
